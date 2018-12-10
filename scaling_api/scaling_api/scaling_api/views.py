@@ -29,7 +29,7 @@ def GetApplicationObject(data):
     app.InstanceType = data["InstanceType"]
     return app
 
-def GetScaleUpObject(data):
+def GetScaleObject(data):
     application = GetApplicationObject(data)
     scale = Scale.ScaleEnvironment(application,InitializeEc2Client(),InitializeELBClient(),InitializeASGClient())
     scale.scaling_type = data["ScalingType"]
@@ -38,7 +38,7 @@ def GetScaleUpObject(data):
 @app.route('/scaleup',methods=['GET','POST'])
 def scaleup():
     data =  request.get_json()
-    scale_object = GetScaleUpObject(data)
+    scale_object = GetScaleObject(data)
     Status = scale_object.ScaleUpEnvironment()
     Status = True
     if Status:
@@ -46,32 +46,13 @@ def scaleup():
     else:
         return jsonify("Error in Scaling now contact DevOps :) !!! ")
 
-@app.route('/')
-@app.route('/home')
-def home():
-    """Renders the home page."""
-    return render_template(
-        'index.html',
-        title='Home Page',
-        year=datetime.now().year,
-    )
-
-@app.route('/contact')
-def contact():
-    """Renders the contact page."""
-    return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
-    )
-
-@app.route('/about')
-def about():
-    """Renders the about page."""
-    return render_template(
-        'about.html',
-        title='About',
-        year=datetime.now().year,
-        message='Your application description page.'
-    )
+@app.route('/scaledown',methods=['GET','POST'])
+def scaledown():
+    data =  request.get_json()
+    scale_object = GetScaleObject(data)
+    Status = scale_object.ScaleDownEnvironment()
+    Status = True
+    if Status:
+        return jsonify("application scaled up successfully")
+    else:
+        return jsonify("Error in Scaling now contact DevOps :) !!! ")
