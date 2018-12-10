@@ -1,0 +1,13 @@
+D:\launchpad_project\scaling_api\scaling_api\bin\Microsoft.PythonTools.WebRole.dll
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\attach_server.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\visualstudio_py_debugger.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\visualstudio_py_repl.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\visualstudio_py_util.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\__init__.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\__main__.py
+D:\launchpad_project\scaling_api\scaling_api\bin\AzureSetup.cfg
+D:\launchpad_project\scaling_api\scaling_api\bin\Microsoft.PythonTools.AzureSetup.exe
+D:\launchpad_project\scaling_api\scaling_api\bin\Microsoft.PythonTools.AzureSetup.exe.config
+D:\launchpad_project\scaling_api\scaling_api\bin\wfastcgi.py
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\web.config
+D:\launchpad_project\scaling_api\scaling_api\obj\Debug\web.debug.config
